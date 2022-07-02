@@ -1,0 +1,14 @@
+<?php
+
+namespace DummyNamespace;
+
+use Gkalmoukis\Repositories\BaseRepository;
+use App\Models\{{Model}};
+
+class DummyClass extends BaseRepository
+{
+    public function __construct({{Model}} $model) {
+        $this->model = $model;
+        $this->modelClass = get_class($model);
+    }
+}

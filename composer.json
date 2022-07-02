@@ -1,5 +1,5 @@
 {
-    "name": "gkalmoukis/repositories",
+    "name": "gkalmoukis/laravel-repositories",
     "autoload": {
         "psr-4": {
             "Gkalmoukis\\Repositories\\": "src/"
@@ -11,5 +11,17 @@
             "email": "giorgoskalmoukis@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "orchestra/testbench": "^6.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gkalmoukis\\Repositories\\RepositoryServiceProvider"
+            ],
+            "aliases": {
+                "Repository": "Gkalmoukis\\Repositories\\Facades\\Repository"
+            }
+        }
+    }
 }
