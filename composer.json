@@ -1,0 +1,15 @@
+{
+    "name": "gkalmoukis/repositories",
+    "autoload": {
+        "psr-4": {
+            "Gkalmoukis\\Repositories\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gkalmoukis",
+            "email": "giorgoskalmoukis@gmail.com"
+        }
+    ],
+    "require": {}
+}
