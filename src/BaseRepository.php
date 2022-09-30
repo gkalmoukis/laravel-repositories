@@ -5,6 +5,7 @@ namespace Gkalmoukis\Repositories;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Pagination\Paginator;
 
 abstract class BaseRepository
 {
@@ -256,6 +257,9 @@ abstract class BaseRepository
                                 int     $page       = null
                             ) {
 
+        $page = Paginator::resolveCurrentPage('page');
+        $perPage = $perPage ?? $this->getModel()->getPerPage();
+        
         return $this->orderBy()->getModel()->paginate(
             $perPage ?? 15, 
             $columns, 
