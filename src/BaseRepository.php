@@ -254,13 +254,13 @@ abstract class BaseRepository
     public function paginate(   int     $perPage    = null, 
                                 array   $columns    = ['*'], 
                                 string  $pageName   = 'page',
-                                int     $page       = null
+                                array   $withs      = []
                             ) {
 
         $page = Paginator::resolveCurrentPage('page');
         $perPage = $perPage ?? $this->getModel()->getPerPage();
         
-        return $this->orderBy()->getModel()->paginate(
+        return $this->orderBy()->getModel()->with($withs)->paginate(
             $perPage ?? 15, 
             $columns, 
             $pageName, 
