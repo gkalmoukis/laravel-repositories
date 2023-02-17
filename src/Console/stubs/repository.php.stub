@@ -2,13 +2,12 @@
 
 namespace DummyNamespace;
 
-use Gkalmoukis\Repositories\BaseRepository;
+use Gkalmoukis\Repositories\BaseEloquentRepository;
 use App\Models\{{Model}};
 
-class DummyClass extends BaseRepository
+class DummyClass extends BaseEloquentRepository
 {
-    public function __construct({{Model}} $model) {
-        $this->model = $model;
-        $this->modelClass = get_class($model);
+    public function __construct({{Model}} $model){
+        parent::__construct($model);
     }
 }
