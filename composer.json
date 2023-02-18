@@ -11,6 +11,9 @@
             "email": "giorgoskalmoukis@gmail.com"
         }
     ],
+    "require": {
+        "php": "^8.1"
+    },
     "require-dev": {
         "orchestra/testbench": "^6.0"
     },
