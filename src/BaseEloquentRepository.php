@@ -2,13 +2,15 @@
 
 namespace Gkalmoukis\Repositories;
 
+use Illuminate\Support\Facades\DB; 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 abstract class BaseEloquentRepository
 {
     public function __construct(
-        protected Model $model
+        protected Model $model,
+        protected DB $db
     ) {}
 
 
@@ -52,5 +54,4 @@ abstract class BaseEloquentRepository
             ->with($relations)
             ->findOrFail($id);
     }
-   
 }
