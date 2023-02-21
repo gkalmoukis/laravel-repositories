@@ -10,7 +10,7 @@ abstract class BaseEloquentRepository
 {
     public function __construct(
         protected Model $model,
-        protected DB $db
+        public DB $db
     ) {}
 
 
