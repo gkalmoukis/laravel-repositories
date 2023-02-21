@@ -1,5 +1,6 @@
 {
     "name": "gkalmoukis/laravel-repositories",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Gkalmoukis\\Repositories\\": "src/"
