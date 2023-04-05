@@ -4,7 +4,7 @@ namespace Gkalmoukis\Repositories\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Calculator extends Facade
+class Repository extends Facade
 {
     protected static function getFacadeAccessor()
     {
