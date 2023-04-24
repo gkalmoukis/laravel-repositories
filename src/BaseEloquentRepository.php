@@ -8,10 +8,13 @@ use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 abstract class BaseEloquentRepository
 {
+    protected $db;
+
     public function __construct(
-        protected Model $model,
-        public DB $db
-    ) {}
+        protected Model $model
+    ) {
+        $this->db = new DB();
+    }
 
 
     public function all(array $relations = []) 
